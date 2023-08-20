@@ -1,5 +1,6 @@
-import java.util.Scanner;
+// Exercício 10 - Lista 02 - POO
 
+import java.util.Scanner;
 public class CalculaDistancia {
     public static void main(String[] args) {
         double tempoViagem, velocidadeMedia, distancia, litros;

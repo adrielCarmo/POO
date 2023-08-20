@@ -1,5 +1,6 @@
-import java.util.Scanner;
+// Exercício 09 - Lista 02 - POO
 
+import java.util.Scanner;
 public class ConverTemp {
     public static void main(String[] args) {
         Scanner r = new Scanner(System.in);

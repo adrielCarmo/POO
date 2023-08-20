@@ -1,9 +1,9 @@
-// Exercício 01 - Lista 02 - POO
+// Exercício 02 - Lista 02 - POO
 
 import java.util.Scanner;
-public class CalculaAdicao {
-    public static int somar(int a, int b) {
-        return (a + b);
+public class CalculaProd {
+    public static int multiplicar(int a, int b) {
+        return (a * b);
     }
 
     public static void main(String[] args) {
@@ -15,6 +15,6 @@ public class CalculaAdicao {
         System.out.print("Insira o segundo número: ");
         b = r.nextInt();
 
-        System.out.println("A soma dos números informados é " + somar(a, b) + "!");
+        System.out.println("O produto dos números informados é " + multiplicar(a, b) + ".");
     }
 }
