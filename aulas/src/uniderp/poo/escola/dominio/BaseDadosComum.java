@@ -2,10 +2,19 @@ package uniderp.poo.escola.dominio;
 
 import java.util.Date;
 
-public abstract class BaseDadosComum {
+public abstract class BaseDadosComum extends BaseIdentificador {
     protected String endereco;
     protected String telefone;
     protected Date dataInsercao;
+
+    public BaseDadosComum() {
+    }
+
+    public BaseDadosComum(String endereco, String telefone, Date dataInsercao) {
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.dataInsercao = dataInsercao;
+    }
 
     public String getEndereco() {
         return endereco;
@@ -31,12 +40,4 @@ public abstract class BaseDadosComum {
         this.dataInsercao = dataInsercao;
     }
 
-    public BaseDadosComum(String endereco, String telefone, Date dataInsercao) {
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.dataInsercao = dataInsercao;
-    }
-
-    public BaseDadosComum() {
-    }
 }

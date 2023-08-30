@@ -2,10 +2,21 @@ package uniderp.poo.escola.dominio;
 
 import java.util.Date;
 
-public abstract class BasePessoaFisica {
+public abstract class BasePessoaFisica extends BasePessoa {
     protected Date dataNascimento;
     protected String rg;
     protected String cpf;
+
+    public BasePessoaFisica() {
+
+    }
+
+    public BasePessoaFisica(Date dataNascimento, String rg, String cpf) {
+        super();
+        this.dataNascimento = dataNascimento;
+        this.rg = rg;
+        this.cpf = cpf;
+    }
 
     public Date getDataNascimento() {
         return dataNascimento;
@@ -29,15 +40,5 @@ public abstract class BasePessoaFisica {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public BasePessoaFisica(Date dataNascimento, String rg, String cpf) {
-        this.dataNascimento = dataNascimento;
-        this.rg = rg;
-        this.cpf = cpf;
-    }
-
-    public BasePessoaFisica() {
-
     }
 }
