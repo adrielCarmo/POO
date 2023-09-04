@@ -6,7 +6,12 @@ public abstract class BasePessoa extends Identificador {
     protected Usuario usuario;
     protected Endereco endereco;
 
+    public BasePessoa() {
+
+    }
+
     public BasePessoa(String nome, String telefone, Usuario usuario, Endereco endereco) {
+        super();
         this.nome = nome;
         this.telefone = telefone;
         this.usuario = new Usuario();

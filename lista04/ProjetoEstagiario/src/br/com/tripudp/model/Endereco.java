@@ -1,6 +1,6 @@
 package br.com.tripudp.model;
 
-public class Endereco {
+public class Endereco extends Identificador {
     private String logradouro;
     private String bairro;
     private int numero;
@@ -13,6 +13,7 @@ public class Endereco {
     }
 
     public Endereco(String logradouro, String bairro, int numero, String cep, String cidade, String estado) {
+        super();
         this.logradouro = logradouro;
         this.bairro = bairro;
         this.numero = numero;
