@@ -3,27 +3,29 @@ package br.com.tripudp.model;
 import java.util.Date;
 
 public class Usuario extends Identificador {
-    private String nome;
+    private String login;
     private String senha;
     private String email;
     private int perfil;
     private Date dataRegistro;
 
-    public Usuario(String nome, String senha, String email, int perfil, Date dataRegistro) {
+    public Usuario(){}
+
+    public Usuario(String login, String senha, String email, int perfil, Date dataRegistro) {
         super();
-        this.nome = nome;
+        this.login = login;
         this.senha = senha;
         this.email = email;
         this.perfil = perfil;
         this.dataRegistro = dataRegistro;
     }
 
-    public String getNome() {
-        return nome;
+    public String getLogin() {
+        return login;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setLogin(String nome) {
+        this.login = nome;
     }
 
     public String getSenha() {
