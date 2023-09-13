@@ -1,21 +1,34 @@
 package uniderp.poo.escola.dominio;
 
-public abstract class BasePessoa extends BaseDadosComum {
-    protected String nome;
+import java.time.LocalDate;
+
+public abstract class BasePessoa extends BaseDadosComum implements Impressao {
+    protected String endereco;
+    protected String telefone;
 
     public BasePessoa() {
 
     }
 
-    public BasePessoa(String nome) {
-        this.nome = nome;
+    public BasePessoa(int codigo, LocalDate dataInsercao, String endereco, String telefone) {
+        super(codigo, dataInsercao);
+        this.endereco = endereco;
+        this.telefone = telefone;
     }
 
-    public String getNome() {
-        return nome;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

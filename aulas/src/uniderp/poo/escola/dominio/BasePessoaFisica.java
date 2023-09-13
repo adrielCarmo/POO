@@ -1,29 +1,31 @@
 package uniderp.poo.escola.dominio;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class BasePessoaFisica extends BasePessoa {
-    protected Date dataNascimento;
+    protected String nome;
     protected String rg;
     protected String cpf;
+    protected LocalDate dataNascimento;
 
     public BasePessoaFisica() {
 
     }
 
-    public BasePessoaFisica(Date dataNascimento, String rg, String cpf) {
-        super();
-        this.dataNascimento = dataNascimento;
+    public BasePessoaFisica(int codigo, LocalDate dataInsercao, String endereco, String telefone, String nome, String rg, String cpf, LocalDate dataNascimento) {
+        super(codigo, dataInsercao, endereco, telefone);
+        this.nome = nome;
         this.rg = rg;
         this.cpf = cpf;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getRg() {
@@ -40,5 +42,13 @@ public abstract class BasePessoaFisica extends BasePessoa {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(LocalDate dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }

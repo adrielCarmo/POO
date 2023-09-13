@@ -1,43 +1,23 @@
 package uniderp.poo.escola.dominio;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class BaseDadosComum extends BaseIdentificador {
-    protected String endereco;
-    protected String telefone;
-    protected Date dataInsercao;
+    protected LocalDate dataInsercao;
 
     public BaseDadosComum() {
     }
 
-    public BaseDadosComum(String endereco, String telefone, Date dataInsercao) {
-        this.endereco = endereco;
-        this.telefone = telefone;
+    public BaseDadosComum(int codigo, LocalDate dataInsercao) {
+        super(codigo);
         this.dataInsercao = dataInsercao;
     }
 
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public Date getDataInsercao() {
+    public LocalDate getDataInsercao() {
         return dataInsercao;
     }
 
-    public void setDataInsercao(Date dataInsercao) {
+    public void setDataInsercao(LocalDate dataInsercao) {
         this.dataInsercao = dataInsercao;
     }
-
 }
